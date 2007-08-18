@@ -1,6 +1,6 @@
 %define name    xmlsysd
 %define version 1.0.4
-%define release %mkrel 1
+%define release %mkrel 2
 # The following should match PROGRAM, VERSION and RELEASE in the
 # Makefile accompanying this program (and the .tgz defined in Source
 # below.
@@ -16,7 +16,7 @@ License: GPL
 Source: http://www.phy.duke.edu/~rgb/wulfware/%{name}-%{version}.tgz
 Source1: %{name}.xinetd
 Buildroot: %{_tmppath}/%{name}root
-BuildRequires: libxml2-devel, libwulf1-devel
+BuildRequires: libxml2-devel, libwulf-devel
 Patch0:	xmlsysd-proc-net.patch
 Requires: xinetd
 
