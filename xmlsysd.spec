@@ -5,7 +5,7 @@
 # Makefile accompanying this program (and the .tgz defined in Source
 # below.
 
-Summary: xmlsysd is an xml-based system information daemon
+Summary: XML-based system information daemon
 
 Name: %name
 Version: %version
