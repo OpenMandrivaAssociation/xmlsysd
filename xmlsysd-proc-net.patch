@@ -1,0 +1,16 @@
+--- get_proc_net.c~	2004-03-12 17:59:14.000000000 +0100
++++ get_proc_net.c	2004-06-18 15:25:50.598779393 +0200
+@@ -146,8 +146,11 @@
+ 	if (ioctl(skfd, SIOCGIFADDR, &ifr) == 0) {
+           memcpy(&sin, &ifr.ifr_addr, sizeof(struct sockaddr));
+           sprintf(interface_ip,"%s",inet_ntoa(sin.sin_addr));
+-          host = gethostbyaddr(&sin.sin_addr,4,AF_INET);
+-          strncpy(if_hostname,host->h_name,62);
++	  host = gethostbyaddr(&sin.sin_addr,4,AF_INET);
++          if (host == NULL)
++		strcpy(if_hostname,"localhost");
++          else
++          	strncpy(if_hostname,host->h_name,62);
+           k = 0;
+           while(if_hostname[k] != 0 && if_hostname[k] != '.') {
+             k++;
