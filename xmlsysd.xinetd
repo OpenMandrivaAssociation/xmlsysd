@@ -1,0 +1,15 @@
+service xmlsysd
+{
+        disable                 = no
+        socket_type             = stream
+        protocol                = tcp
+        wait                    = no
+        user                    = nobody
+        server                  = /usr/sbin/xmlsysd
+        server_args             = -i 7887
+        port                    = 7887
+        type                    = unlisted
+        instances               = 10
+#       only_from               = 10.0.0.0,172.16.0,0,192.168.0.0
+}
+
