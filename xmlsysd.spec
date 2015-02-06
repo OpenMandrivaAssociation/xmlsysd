@@ -1,6 +1,6 @@
 %define name    xmlsysd
 %define version 1.0.4
-%define release %mkrel 7
+%define release 8
 # The following should match PROGRAM, VERSION and RELEASE in the
 # Makefile accompanying this program (and the .tgz defined in Source
 # below.
