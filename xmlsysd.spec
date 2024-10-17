@@ -11,7 +11,7 @@ Name: %name
 Version: %version
 Release: %release
 Group: Monitoring
-Url: http://www.phy.duke.edu/~rgb/Beowulf/xmlsysd.php
+Url: https://www.phy.duke.edu/~rgb/Beowulf/xmlsysd.php
 License: GPL
 Source: http://www.phy.duke.edu/~rgb/wulfware/%{name}-%{version}.tgz
 Source1: %{name}.xinetd
